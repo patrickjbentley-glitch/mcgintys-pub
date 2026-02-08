@@ -484,17 +484,62 @@ nav ul a:hover {
   transform: translateY(0);
 }
 
-/* Feature 3: Wall of Legends SEO Carousel */
+/* Partners Section - Single CTA */
+.partners-section {
+  padding: 60px 5%;
+  background: linear-gradient(135deg, rgba(27, 48, 34, 0.95), rgba(15, 26, 20, 0.98));
+  border-top: 1px solid var(--brass-glow);
+  border-bottom: 1px solid var(--brass-glow);
+}
+
+.partner-highlight {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.partner-label {
+  display: inline-block;
+  background: var(--polished-brass);
+  color: var(--library-green);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.partner-highlight h3 {
+  font-size: 2rem;
+  color: var(--aged-cream);
+  margin-bottom: 15px;
+}
+
+.partner-highlight p {
+  opacity: 0.9;
+  margin-bottom: 25px;
+}
+
+/* The Local Legends - Masonry Grid */
 .legends-section {
   border-top: 2px solid var(--polished-brass);
-  padding: 80px 5%;
-  background: linear-gradient(180deg, var(--library-green) 0%, #0f1a14 100%);
+  padding: 80px 5% 120px;
+  background: var(--aged-cream);
 }
 
 .legends-section h2 {
   font-size: 2.5rem;
-  color: var(--polished-brass);
+  color: var(--library-green);
+  margin-bottom: 10px;
+}
+
+.legends-subtitle {
+  color: var(--library-green);
+  opacity: 0.7;
   margin-bottom: 50px;
+  font-style: italic;
 }
 
 .legends-carousel {
@@ -522,23 +567,67 @@ nav ul a:hover {
 .legend-meta {
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
+  font-style: italic;
 }
 
-.legend-item cite {
+.legends-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.legend-card {
+  background: var(--library-green);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  transition: var(--transition-smooth);
+}
+
+.legend-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.legend-card blockquote {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--aged-cream);
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.legend-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.legend-author cite {
+  display: block;
   font-family: var(--font-sans);
-  text-transform: uppercase;
-  letter-spacing: 2px;
   font-style: normal;
   font-weight: 600;
   color: var(--polished-brass);
+  margin-bottom: 4px;
+}
+
+.member-since {
+  font-size: 0.75rem;
+  opacity: 0.6;
+  color: var(--aged-cream);
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .legend-source {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   opacity: 0.5;
+  color: var(--aged-cream);
   text-transform: uppercase;
   letter-spacing: 1px;
   border-bottom: 1px dotted currentColor;
@@ -550,22 +639,7 @@ nav ul a:hover {
   color: var(--polished-brass);
 }
 
-@keyframes legendFade {
-
-  0%,
-  100% {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-
-  15%,
-  85% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Feature 4: Angelo's Connection FAB */
+/* Angelo's FAB */
 .angelos-fab {
   position: fixed;
   bottom: 30px;
@@ -573,11 +647,11 @@ nav ul a:hover {
   z-index: 900;
   background: var(--polished-brass);
   color: var(--library-green);
-  padding: 16px 24px;
+  padding: 14px 22px;
   border-radius: 50px;
   font-family: var(--font-sans);
   font-weight: 700;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
@@ -603,10 +677,10 @@ nav ul a:hover {
   }
 }
 
-/* Footer */
+/* Footer with Breathing Room */
 footer {
   text-align: center;
-  padding: 40px 5%;
+  padding: 60px 5%;
   background: #0a0a0a;
   border-top: 1px solid var(--brass-glow);
 }
@@ -621,16 +695,20 @@ footer p {
   .angelos-fab {
     bottom: 20px;
     right: 20px;
-    padding: 12px 18px;
-    font-size: 0.8rem;
+    padding: 12px 16px;
+    font-size: 0.75rem;
   }
 
   .patio-badge {
     display: none !important;
   }
 
-  .legend-item blockquote {
-    font-size: 1.3rem;
+  .legends-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .legend-card blockquote {
+    font-size: 1rem;
   }
 
   nav ul {
@@ -639,5 +717,9 @@ footer p {
 
   nav ul a {
     font-size: 0.75rem;
+  }
+
+  .legends-section {
+    padding: 60px 5% 100px;
   }
 }

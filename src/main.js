@@ -34,59 +34,69 @@ async function initPatioBadge() {
     }
 }
 
-// Feature 3: Wall of Legends SEO Carousel
+// The Local Legends - Merged Testimonials with Masonry Grid
 function initWallOfLegends() {
     const legendsData = [
         {
-            text: "The fireplace at McGinty's is unmatched. Nothing beats a Guinness by the fire on a cold Lakewood night. This place feels like home.",
+            text: "Best Guinness in Ohio, hands down. The fireplace in the winter makes it the coziest spot in Lakewood.",
+            author: "Mike R.",
+            memberSince: "2008",
+            source: "Google"
+        },
+        {
+            text: "The fireplace at McGinty's is unmatched. Nothing beats a Guinness by the fire on a cold Lakewood night.",
             author: "Tom H.",
+            memberSince: "2010",
             source: "Google"
         },
         {
-            text: "Best pool table scene in Cleveland! The guys are friendly and the competition is real. Plus, you can order Angelo's Pizza right to your table.",
+            text: "Best pool table scene in Cleveland! Plus, you can order Angelo's Pizza right to your table.",
             author: "Mark S.",
+            memberSince: "2012",
             source: "Google"
         },
         {
-            text: "We order Angelo's Pizza every time we're here. The bartenders know exactly when it arrives. Can't beat a proper pour and proper pizza.",
+            text: "We order Angelo's Pizza every time. Can't beat a proper pour and proper pizza.",
             author: "Jennifer L.",
+            memberSince: "2015",
             source: "Google"
         },
         {
-            text: "The fireplace, the pool table, the regulars - this is what every Irish pub should be. Been coming here since 2005 and it never changes.",
+            text: "The fireplace, the pool table, the regulars - this is what every Irish pub should be.",
             author: "Brian K.",
+            memberSince: "2005",
             source: "Google"
         },
         {
-            text: "Dog-friendly patio is perfect in summer. We bring our Lab and order Angelo's Pizza for the whole crew. Lakewood's best kept secret.",
+            text: "Dog-friendly patio is perfect in summer. Lakewood's best kept secret.",
             author: "Amanda W.",
+            memberSince: "2018",
             source: "Google"
         }
     ];
 
-    const carousel = document.getElementById('legends-carousel');
-    if (!carousel) return;
+    const grid = document.getElementById('legends-grid');
+    if (!grid) return;
 
-    let currentIndex = 0;
-
-    function renderLegend() {
-        const legend = legendsData[currentIndex];
-        carousel.innerHTML = `
-            <div class="legend-item active">
-                <blockquote class="serif">"${legend.text}"</blockquote>
-                <div class="legend-meta">
+    grid.innerHTML = legendsData.map(legend => `
+        <div class="legend-card fade-in">
+            <blockquote class="serif">"${legend.text}"</blockquote>
+            <div class="legend-footer">
+                <div class="legend-author">
                     <cite>— ${legend.author}</cite>
-                    <a href="https://g.page/mcgintys-lakewood" target="_blank" rel="noopener" class="legend-source">Source: ${legend.source}</a>
+                    <span class="member-since">Member since ${legend.memberSince}</span>
                 </div>
+                <a href="https://g.page/mcgintys-lakewood" target="_blank" rel="noopener" class="legend-source">via ${legend.source}</a>
             </div>
-        `;
-    }
+        </div>
+    `).join('');
 
-    renderLegend();
-    setInterval(() => {
-        currentIndex = (currentIndex + 1) % legendsData.length;
-        renderLegend();
-    }, 6000);
+    // Trigger fade-in animations
+    setTimeout(() => {
+        grid.querySelectorAll('.legend-card').forEach((card, i) => {
+            setTimeout(() => card.classList.add('visible'), i * 100);
+        });
+    }, 200);
 }
 
 function initVibeSlideshow() {
