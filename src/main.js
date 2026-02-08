@@ -34,7 +34,7 @@ async function initPatioBadge() {
     }
 }
 
-// The Local Legends - Merged Testimonials with Masonry Grid
+// The Local Legends - Rotating Carousel
 function initWallOfLegends() {
     const legendsData = [
         {
@@ -75,28 +75,30 @@ function initWallOfLegends() {
         }
     ];
 
-    const grid = document.getElementById('legends-grid');
-    if (!grid) return;
+    const carousel = document.getElementById('legends-carousel');
+    if (!carousel) return;
 
-    grid.innerHTML = legendsData.map(legend => `
-        <div class="legend-card fade-in">
-            <blockquote class="serif">"${legend.text}"</blockquote>
-            <div class="legend-footer">
-                <div class="legend-author">
+    let currentIndex = 0;
+
+    function renderLegend() {
+        const legend = legendsData[currentIndex];
+        carousel.innerHTML = `
+            <div class="legend-item active">
+                <blockquote class="serif">"${legend.text}"</blockquote>
+                <div class="legend-meta">
                     <cite>— ${legend.author}</cite>
                     <span class="member-since">Member since ${legend.memberSince}</span>
+                    <a href="https://g.page/mcgintys-lakewood" target="_blank" rel="noopener" class="legend-source">via ${legend.source}</a>
                 </div>
-                <a href="https://g.page/mcgintys-lakewood" target="_blank" rel="noopener" class="legend-source">via ${legend.source}</a>
             </div>
-        </div>
-    `).join('');
+        `;
+    }
 
-    // Trigger fade-in animations
-    setTimeout(() => {
-        grid.querySelectorAll('.legend-card').forEach((card, i) => {
-            setTimeout(() => card.classList.add('visible'), i * 100);
-        });
-    }, 200);
+    renderLegend();
+    setInterval(() => {
+        currentIndex = (currentIndex + 1) % legendsData.length;
+        renderLegend();
+    }, 5000);
 }
 
 function initVibeSlideshow() {

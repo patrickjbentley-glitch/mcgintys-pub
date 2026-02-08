@@ -545,7 +545,7 @@ nav ul a:hover {
 .legends-carousel {
   max-width: 900px;
   margin: 0 auto;
-  min-height: 180px;
+  min-height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -553,21 +553,55 @@ nav ul a:hover {
 
 .legend-item {
   text-align: center;
-  animation: legendFade 6s ease-in-out infinite;
+  animation: legendFade 5s ease-in-out infinite;
 }
 
 .legend-item blockquote {
   font-size: 1.6rem;
   font-style: italic;
   margin-bottom: 25px;
-  color: var(--aged-cream);
+  color: var(--library-green);
   line-height: 1.8;
 }
 
 .legend-meta {
   display: flex;
   justify-content: center;
-  font-style: italic;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.legend-item cite {
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-style: normal;
+  font-weight: 600;
+  color: var(--polished-brass);
+}
+
+.member-since {
+  font-size: 0.75rem;
+  opacity: 0.6;
+  color: var(--library-green);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@keyframes legendFade {
+
+  0%,
+  100% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  15%,
+  85% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .legends-grid {
