@@ -66,7 +66,7 @@ function initWallOfLegends() {
             source: "Google"
         },
         {
-            text: "We order Angelo's Pizza every time. Can't beat a proper pour and proper pizza.",
+            text: "We order Angelo's Pizza every time. Can't beat a cold Guinness and hot pizza.",
             author: "Jennifer L.",
             memberSince: "2015",
             source: "Google"
@@ -173,7 +173,7 @@ function initReviewCarousel() {
             author: "Sarah J., Local Resident"
         },
         {
-            text: "A proper pub feel. No corporate buzzwords, just good people and a proper pour.",
+            text: "A real pub feel. No corporate buzzwords, just good people and cold ones.",
             author: "Dave L., Regular since '05"
         },
         {
