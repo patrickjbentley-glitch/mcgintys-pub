@@ -38,6 +38,7 @@
                 <img src="/images/logo.png" alt="McGinty's Pub Logo"
                     style="height: 70px; display: block; filter: invert(1); mix-blend-mode: screen;">
             </div>
+            <span id="patio-badge" class="patio-badge" style="display: none;">☀️ Doors Open: It's a Patio Day</span>
             <ul>
                 <li><a href="#taps">Live Board</a></li>
                 <li><a href="#vibe">The Vibe</a></li>
@@ -48,6 +49,11 @@
 
     <main>
         <section class="hero">
+            <!-- Dynamic Video Background -->
+            <video class="hero-video" autoplay muted loop playsinline>
+                <source src="/videos/hero-pour.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
             <div class="hero-content">
                 <h1 class="serif">Always a Proper Pour</h1>
                 <p class="hero-tagline">Your home away from home in the heart of Lakewood. Pull up a stool and join the
@@ -120,9 +126,21 @@
                 <a href="https://angelos-pizza.com/" target="_blank" class="btn">Pizza Pipeline</a>
             </div>
         </section>
+
+        <!-- Feature 3: Wall of Legends SEO Carousel -->
+        <section id="legends" class="legends-section">
+            <h2 class="serif text-center">Wall of Legends</h2>
+            <div class="legends-carousel" id="legends-carousel">
+                <!-- Reviews loaded via JS -->
+            </div>
+        </section>
     </main>
 
-    <!-- Floating CTA Removed to reduce button clutter -->
+    <!-- Feature 4: Angelo's Connection FAB -->
+    <a href="https://angelos-pizza.com/order" target="_blank" rel="noopener" class="angelos-fab"
+        aria-label="Order Angelo's Pizza">
+        🍕 Order Angelo's to your stool
+    </a>
 
     <footer>
         <p>&copy; 2026 McGinty's Pub. Lakewood, Ohio. Since 2002.</p>
