@@ -91,17 +91,33 @@ nav ul a:hover {
   transform: translateY(-2px);
 }
 
-/* Patio Weather Badge */
+/* Patio Weather Badge - Always Visible */
 .patio-badge {
-  font-family: var(--font-serif);
-  font-size: 0.95rem;
+  display: none;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
   font-weight: 600;
-  color: var(--polished-brass);
-  background: rgba(212, 175, 55, 0.15);
-  padding: 8px 16px;
+  color: var(--aged-cream);
+  background: rgba(27, 48, 34, 0.9);
+  padding: 8px 14px;
   border-radius: 20px;
   border: 1px solid var(--brass-glow);
-  animation: patioPulse 2s ease-in-out infinite;
+  animation: patioPulse 3s ease-in-out infinite;
+}
+
+.patio-badge.patio-good {
+  background: rgba(46, 125, 50, 0.9);
+  border-color: #4CAF50;
+}
+
+.patio-badge.patio-cozy {
+  background: rgba(183, 110, 0, 0.9);
+  border-color: var(--polished-brass);
+}
+
+.patio-badge.patio-cold {
+  background: rgba(63, 81, 181, 0.9);
+  border-color: #7986CB;
 }
 
 @keyframes patioPulse {
@@ -112,8 +128,43 @@ nav ul a:hover {
   }
 
   50% {
-    box-shadow: 0 0 20px var(--polished-brass);
+    box-shadow: 0 0 15px var(--polished-brass);
   }
+}
+
+/* Hero CTA Button */
+.btn-hero {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 30px;
+  padding: 16px 32px;
+  background: transparent;
+  border: 2px solid var(--polished-brass);
+  color: var(--aged-cream);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 50px;
+  transition: var(--transition-smooth);
+}
+
+.btn-hero:hover {
+  background: var(--polished-brass);
+  color: var(--library-green);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
+}
+
+.btn-arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.btn-hero:hover .btn-arrow {
+  transform: translateX(5px);
 }
 
 .btn:hover {

@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initWallOfLegends();
 });
 
-// Feature 2: Neighborhood-Aware Patio Logic
+// Feature 2: Weather Badge - Always Visible
 async function initPatioBadge() {
     const badge = document.getElementById('patio-badge');
     if (!badge) return;
@@ -22,15 +22,25 @@ async function initPatioBadge() {
         );
         const data = await response.json();
 
-        const temp = data.current.temperature_2m;
+        const temp = Math.round(data.current.temperature_2m);
         const precipitation = data.current.precipitation;
 
-        // Show badge if temp > 60°F and no precipitation
+        // Always show badge with weather-appropriate message
         if (temp > 60 && precipitation === 0) {
-            badge.style.display = 'inline-block';
+            badge.innerHTML = `☀️ ${temp}°F — Patio's Open`;
+            badge.classList.add('patio-good');
+        } else if (temp > 40) {
+            badge.innerHTML = `🍺 ${temp}°F — Fireplace Weather`;
+            badge.classList.add('patio-cozy');
+        } else {
+            badge.innerHTML = `❄️ ${temp}°F — Warm Up Inside`;
+            badge.classList.add('patio-cold');
         }
+        badge.style.display = 'inline-block';
     } catch (error) {
-        console.log('Weather check unavailable');
+        // Fallback if weather unavailable
+        badge.innerHTML = '🍀 Open Daily 4pm';
+        badge.style.display = 'inline-block';
     }
 }
 
