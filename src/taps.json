@@ -1,0 +1,140 @@
+[
+  {
+    "name": "Guinness Draught",
+    "abv": "4.2%",
+    "type": "Irish Stout",
+    "brewery": "Guinness"
+  },
+  {
+    "name": "Harp Lager",
+    "abv": "5.0%",
+    "type": "European Pale Lager",
+    "brewery": "Guinness"
+  },
+  {
+    "name": "Miller Lite",
+    "abv": "4.2%",
+    "type": "American Light Lager",
+    "brewery": "Miller Brewing"
+  },
+  {
+    "name": "Smithwick's",
+    "abv": "4.5%",
+    "type": "Irish Red Ale",
+    "brewery": "Guinness"
+  },
+  {
+    "name": "Stella Artois",
+    "abv": "5.2%",
+    "type": "European Pale Lager",
+    "brewery": "Stella Artois"
+  },
+  {
+    "name": "Labatt Blue",
+    "abv": "5.0%",
+    "type": "Pilsner",
+    "brewery": "Labatt"
+  },
+  {
+    "name": "Magner's Cider",
+    "abv": "4.5%",
+    "type": "Irish Cider",
+    "brewery": "Magner's"
+  },
+  {
+    "name": "Weihenstephaner Hefeweissbier",
+    "abv": "5.4%",
+    "type": "Hefeweizen",
+    "brewery": "Weihenstephan"
+  },
+  {
+    "name": "Shacksbury O.G. Cider",
+    "abv": "6.0%",
+    "type": "Dry Cider",
+    "brewery": "Shacksbury"
+  },
+  {
+    "name": "Bell's Two Hearted",
+    "abv": "7.0%",
+    "type": "American IPA",
+    "brewery": "Bell's Brewery"
+  },
+  {
+    "name": "12 Dogs of Christmas",
+    "abv": "8.3%",
+    "type": "Winter Warmer",
+    "brewery": "Thirsty Dog"
+  },
+  {
+    "name": "Rhinegeist Truth",
+    "abv": "7.2%",
+    "type": "IPA",
+    "brewery": "Rhinegeist"
+  },
+  {
+    "name": "Peanut Butter Porter",
+    "abv": "5.7%",
+    "type": "Porter",
+    "brewery": "Saugatuck Brewing"
+  },
+  {
+    "name": "Albino Stout",
+    "abv": "5.4%",
+    "type": "White Stout",
+    "brewery": "Butcher and the Brewer"
+  },
+  {
+    "name": "Branch & Bone Hazy",
+    "abv": "Varies",
+    "type": "Hazy IPA",
+    "brewery": "Branch & Bone"
+  },
+  {
+    "name": "Elvis Juice",
+    "abv": "6.5%",
+    "type": "Grapefruit IPA",
+    "brewery": "BrewDog"
+  },
+  {
+    "name": "Scrimshaw Pils",
+    "abv": "4.7%",
+    "type": "Pilsner",
+    "brewery": "North Coast"
+  },
+  {
+    "name": "Left Hand Milk Stout",
+    "abv": "6.0%",
+    "type": "Nitro Milk Stout",
+    "brewery": "Left Hand"
+  },
+  {
+    "name": "Great Lakes Conway's",
+    "abv": "6.3%",
+    "type": "Irish Ale",
+    "brewery": "Great Lakes Brewing"
+  },
+  {
+    "name": "Urban Artifact Gadget",
+    "abv": "7.9%",
+    "type": "Fruit Tart",
+    "brewery": "Urban Artifact"
+  },
+  {
+    "name": "Alesmith Nut Brown",
+    "abv": "5.0%",
+    "type": "English Brown Ale",
+    "brewery": "Alesmith"
+  },
+  {
+    "name": "Troegs Mad Elf",
+    "abv": "11.0%",
+    "type": "Belgian Strong Dark Ale",
+    "brewery": "Troegs"
+  },
+  {
+    "name": "Five Flowers Rosé Lemonade",
+    "abv": "5mg THC",
+    "type": "THC Seltzer",
+    "brewery": "Five Flowers"
+  }
+]

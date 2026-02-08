@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>McGinty's Pub | Lakewood, Ohio | Proper Irish, Lakewood Local</title>
+    <meta name="description"
+        content="McGinty's Pub in Lakewood, Ohio. Best Guinness in Cleveland, dog-friendly bar, and pub with pool table on Madison Ave. Pull up a stool at your home away from home.">
+    <link rel="stylesheet" href="/src/style.css">
+    <!-- JSON-LD BarOrPub Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BarOrPub",
+      "name": "McGinty's Pub",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "13751 Madison Ave",
+        "addressLocality": "Lakewood",
+        "addressRegion": "OH",
+        "postalCode": "44107",
+        "addressCountry": "US"
+      },
+      "url": "https://mcgintyspublakewood.com",
+      "telephone": "+12165213513",
+      "servesCuisine": "Pub food, Guinness",
+      "priceRange": "$$",
+      "keywords": "Dog friendly bar Lakewood, Best Guinness Cleveland, Pub with pool table Madison Ave"
+    }
+    </script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="/images/logo.png" alt="McGinty's Pub Logo"
+                    style="height: 70px; display: block; filter: invert(1); mix-blend-mode: screen;">
+            </div>
+            <ul>
+                <li><a href="#taps">Live Board</a></li>
+                <li><a href="#vibe">The Vibe</a></li>
+                <li><a href="#reviews">Regulars</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="serif">Always a Proper Pour</h1>
+                <p class="hero-tagline">Your home away from home in the heart of Lakewood. Pull up a stool and join the
+                    family.</p>
+                <div class="hero-btns">
+                    <a href="#order" class="btn btn-primary">Order Angelo's Pizza</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="taps" class="taps-section">
+            <h2 class="serif text-center" style="margin-bottom: 50px; font-size: 3rem; color: var(--polished-brass);">On
+                Tap Today</h2>
+            <div class="tap-list">
+                <div id="tap-grid" class="tap-grid">
+                    <!-- Taps will be loaded here via JS -->
+                </div>
+            </div>
+            <p class="text-center" style="margin-top: 30px; font-style: italic; opacity: 0.8;">Updated daily. Always
+                fresh.</p>
+        </section>
+
+        <section id="vibe" class="vibe-section">
+            <div class="vibe-container">
+                <div class="vibe-slideshow fade-in">
+                    <div class="slides-container" id="vibe-slides">
+                        <div class="slide active"><img src="/images/vibe-1.jpg" alt="Fireplace"></div>
+                        <div class="slide"><img src="/images/vibe-2.jpg" alt="The Bar"></div>
+                        <div class="slide"><img src="/images/vibe-3.jpg" alt="Pool Table"></div>
+                        <div class="slide"><img src="/images/vibe-4.jpg" alt="Cozy Seating"></div>
+                    </div>
+                    <div class="slide-overlay">The Vibe</div>
+                </div>
+                <div class="about-content fade-in">
+                    <h2 class="serif">Lakewood Resident Staple</h2>
+                    <p>McGinty's Pub is more than just a bar; it's a neighborhood anchor. Since 2002, we've been the
+                        local go-to for a proper pour, a warm fireplace, and a friendly face. Whether you're here for
+                        the best Guinness in Cleveland or a quick game of pool, you're home.</p>
+                    <div class="about-details">
+                        <div class="detail">
+                            <h4 class="serif">Proper Irish</h4>
+                            <p>Authentic atmosphere and the perfect pour.</p>
+                        </div>
+                        <div class="detail">
+                            <h4 class="serif">Dog Friendly</h4>
+                            <p>Bring your best friend to our Madison Ave patio.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="reviews" class="reviews-section">
+            <h2 class="serif text-center" style="margin-bottom: 50px;">Straight from the Regulars</h2>
+            <div class="review-carousel" id="review-carousel">
+                <!-- Custom carousel items -->
+                <div class="review-item active">
+                    <blockquote class="serif">"Best Guinness in Ohio, hands down. The fireplace in the winter makes it
+                        the coziest spot in Lakewood."</blockquote>
+                    <cite>— Mike R., Madison Ave. Regular</cite>
+                </div>
+            </div>
+        </section>
+
+        <section id="order" class="order-section">
+            <div class="pizza-card">
+                <h2 class="serif">The Pizza Pipeline</h2>
+                <p>Hungry? Order from our neighbors at <strong>Angelo's Pizza</strong> and have it delivered straight to
+                    your stool at McGinty's.</p>
+                <a href="https://angelos-pizza.com/" target="_blank" class="btn">Pizza Pipeline</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Floating CTA Removed to reduce button clutter -->
+
+    <footer>
+        <p>&copy; 2026 McGinty's Pub. Lakewood, Ohio. Since 2002.</p>
+        <p>13751 Madison Ave, Lakewood, OH 44107 | (216) 521-3513</p>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
